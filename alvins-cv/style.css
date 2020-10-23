@@ -1,0 +1,476 @@
+/* color reference: https://colorhunt.co/palette/207313 */
+
+/* for the scrolling when I click the button to the parts of website */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0%;
+  background-color: #000;
+}
+
+/* ---------- BUTTON UP ---------- */
+
+/* the button to go to the top in bottom-right */
+.top {
+  z-index: 5;
+  position: fixed;
+  border-radius: 100%;
+  right: 50px;
+  bottom: 80px;
+  width: 50px;
+  height: 50px;
+  background-color: #ff4b5c;
+  color: white;
+  text-align: center;
+  box-shadow: 8px 8px 10px #000000b9;
+  transition: 0.5s;
+}
+
+.top-button {
+  color: white;
+}
+
+.top:hover {
+  background-color: #66bfbf;
+  box-shadow: 3px 3px 10px #000000b9;
+  transition: 0.5s;
+}
+
+.up {
+  font-size: 40px;
+}
+
+/* ---------- CONTAINER ---------- */
+
+.container {
+  margin-left: 80px;
+  padding: 60px;
+}
+
+.container-content {
+  margin-left: 80px;
+  padding: 80px;
+}
+
+/* ---------- SIDEBAR ---------- */
+
+/* sidebar  */
+.sidebar {
+  z-index: 5;
+  list-style-type: none;
+  margin: 0;
+  padding: 150px 0;
+  width: 80px;
+  background-color: #000;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  top: 0%;
+  text-align: center;
+}
+
+/* alvin's paraph - icon */
+.sidebar-icon {
+  z-index: 6;
+  position: fixed;
+  margin: 16px 0 0 5px;
+  width: 70px;
+  top: 0;
+}
+
+/* <li></li> elements in navigation bar */
+.nav-li {
+  padding: 10px 0;
+}
+
+/* <a></a> elements in navigation bar (linked to other parts of website) */
+.navlink {
+  display: block;
+  padding: 10px 0;
+  color: #818181;
+  text-decoration: none;
+  font-size: 20px;
+  transition: background-color 0.5s, color 5s;
+}
+
+.navlink:hover {
+  background-color: #fff5f5;
+  box-shadow: 0px 0px 50px #ff4b5c80;
+  color: #ff2f44;
+  border-right: 2px solid #ff4b5c;
+  transition: background-color 0.8s, box-shadow 0.8s, color 0.3s,
+    border-right 0.8s;
+}
+
+/* ---------- HOMEPAGE ---------- */
+
+.home {
+  background: linear-gradient(to bottom, #e0ece400 50%, #056674 100%);
+  height: 500px;
+}
+
+/* red polygon with dots - png picture */
+.dottedpng {
+  position: absolute;
+  width: 95%;
+  transform: translateY(-75%);
+  left: 63px;
+}
+
+/* the "hi i'm alvin a future programmer in progress" div */
+.nickname {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  margin-top: 40px;
+  text-align: center;
+  text-shadow: 0 0 10px #ff4b5c;
+}
+
+/* .nickname first line */
+.nickname h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 20px;
+}
+
+/* .nickname second line */
+.alvin {
+  margin: 50px 0 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 5rem;
+  color: #fff;
+  border-bottom: 0px;
+  width: auto;
+  padding-bottom: 0px;
+}
+
+/* .nickname third line */
+.nickname p {
+  font-family: "Tangerine", cursive;
+  font-size: 28px;
+}
+
+/* circuit png picture from homepage to about me page */
+.home img {
+  position: absolute;
+  transform: rotate(180deg);
+  width: 95%;
+  right: 0;
+  top: 130px;
+}
+
+/* ---------- ABOUT ME ---------- */
+
+.about {
+  background-color: #056674;
+  height: 500px;
+}
+
+.about h3 {
+  font-family: "Arsenal", sans-serif;
+  font-size: 35px;
+}
+
+.about p {
+  font-family: "Arsenal", sans-serif;
+  font-size: 20px;
+  line-height: 2;
+  color: #03434d;
+}
+
+/* profile image and its animation */
+.profile img {
+  z-index: 1;
+  position: absolute;
+  width: 15%;
+  transform: rotate(10deg);
+  border: 1px solid #ff4b5c;
+  border-radius: 5px;
+  box-shadow: 2px 2px 20px #000;
+  animation: anim-profile 1.5s infinite;
+}
+/*     ↓  ↓  ↓  ↓  ↓       */
+
+@keyframes anim-profile {
+  0% {
+    border-radius: 5px 5px 0px 80px;
+  }
+  50% {
+    border-radius: 5px 5px 80px 0px;
+  }
+  100% {
+    border-radius: 5px 5px 0px 80px;
+  }
+}
+
+.profile img:hover {
+  box-shadow: -8px 10px 20px #1d2c3a;
+  transition: box-shadow 0.5s;
+}
+
+.box {
+  position: relative;
+  background-color: #ffffffa6;
+  padding: 20px 100px 20px 220px;
+  margin-right: 40px;
+  border-radius: 32px 0 0 32px;
+  transform: translateX(100px);
+  box-shadow: 10px 5px 20px #000;
+}
+
+/* ---------- EDUCATION ---------- */
+
+.education {
+  position: relative;
+  z-index: 0;
+  height: 500px;
+  background-color: #e0ece4;
+  text-align: center;
+  box-shadow: 0 -5px 30px #000;
+}
+
+/* h1 for Education, Skills, and Contact Me title */
+h1 {
+  font-family: "Cormorant Garamond", serif;
+  color: #056674;
+  border-bottom: 5px dotted #b9aca6;
+  width: 140px;
+  margin: auto auto 10px;
+  padding-bottom: 20px;
+}
+
+/* styling for the Educational Institutions name */
+h3 {
+  font-family: "Arsenal", sans-serif;
+}
+
+/* the dotted border between two Educational Institutions */
+hr {
+  border-style: none;
+  border-bottom: 5px dotted #b9aca6;
+  width: 5%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+/* the red dotted polygon image behind */
+.education img {
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  left: 22%;
+  top: 0px;
+  opacity: 0.5;
+}
+
+/* the white fade background */
+.fade-box-white {
+  position: relative;
+  vertical-align: text-bottom;
+  margin: 0 180px;
+  padding: 20px;
+  height: 100%;
+  /* border-radius: 50px 50px 0 0; */
+  background: linear-gradient(to bottom, #ffffff00 0%, #ffffff 100%);
+}
+
+/* the detail about the education I take in University */
+.fade-box-white h4 {
+  font-family: "arsenal", serif;
+}
+
+/* the graduation years for highschool and "currently studying" for university */
+.fade-box-white p {
+  font-family: "Tangerine", cursive;
+  font-size: 25px;
+  display: inline;
+}
+
+/* ---------- SKILLS ---------- */
+
+.skill {
+  position: relative;
+  height: 500px;
+  /* background: linear-gradient(to left, #ffffff 30%, #ffffff 100%); */
+  background-color: #e0ece4;
+  text-align: center;
+  box-shadow: 0 -10px 30px #fff;
+}
+
+/* name of the skill */
+.skill-list {
+  font-family: "Arsenal", sans-serif;
+  color: #383838;
+}
+
+/* the white dotted polygon image behind */
+.skill img {
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  left: 22%;
+  top: 0px;
+  /* opacity: 0.5; */
+}
+
+/* the red fade background */
+.fade-box-red {
+  position: relative;
+  vertical-align: text-bottom;
+  margin: 0 180px;
+  padding: 20px;
+  height: 100%;
+  /* border-radius: 50px 50px 0 0; */
+  background: linear-gradient(to bottom, #ffffff00 0%, #ff4b5c 100%);
+}
+
+/* the left and right column on the skills */
+.column {
+  z-index: 1;
+  position: relative;
+  float: left;
+  width: 40%;
+  margin: 0 20px;
+  padding: 10px;
+  text-align: left;
+}
+
+/* the progress bar */
+.td-progress-bar {
+  width: 100%;
+}
+
+/* the progress bar border */
+.progress-border {
+  border: 1px solid #858585;
+  border-radius: 10px;
+}
+
+/* the progress bar color;
+   I use inline css for the percentage width */
+.progress-bar {
+  background-color: #fff;
+  height: 10px;
+  border-radius: 10px;
+}
+
+/* the percentage number */
+.progress-percent {
+  display: inline;
+  font-family: "Arsenal", sans-serif;
+  font-size: 13px;
+  color: #383838;
+}
+
+/* ---------- CONTACT ME ---------- */
+
+.contact {
+  position: relative;
+  height: 500px;
+  /* background: linear-gradient(to left, #ffffff 30%, #ffffff 100%); */
+  background-color: #e0ece4;
+  text-align: center;
+  box-shadow: 0 -10px 30px #ff4b5c;
+}
+
+/* my name: Alvin Sengkey */
+.contact h5 {
+  font-family: "Tangerine", cursive;
+  font-size: 35px;
+  margin: 0 0 20px;
+}
+
+/* the address and the phone number */
+.contact p {
+  font-family: "Tangerine", cursive;
+  font-size: 23px;
+  /* margin: 0 0 20px; */
+}
+
+/* the Contact Me title */
+#contact-text {
+  width: auto;
+  padding: 0px 0 40px;
+  margin-bottom: 50px;
+}
+
+/* for the address and whatsapp icon */
+.icon {
+  font-size: 2rem;
+  color: #056674;
+  transition: color 3s;
+}
+
+.icon:hover {
+  color: #66bfbf;
+  transition: color 0.5s;
+}
+
+/* for the social media in the bottom row */
+.socmed {
+  padding: 20px;
+}
+
+/* for the social media icon */
+.socmed a {
+  text-decoration: none;
+  margin: 20px;
+  font-size: 2rem;
+  color: #66bfbf;
+  transition: color 3s;
+}
+
+.socmed a:hover {
+  color: #056674;
+  transition: color 0.5s;
+}
+
+/* for the whatsapp animation */
+.wa {
+  animation: anim-wa 0.8s infinite;
+}
+
+@keyframes anim-wa {
+  0% {
+    font-size: 2rem;
+    margin-bottom: 0px;
+  }
+  50% {
+    font-size: 35px;
+    margin-bottom: -3px;
+  }
+  0% {
+    font-size: 2rem;
+    margin-bottom: 0px;
+  }
+}
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+  position: relative;
+  background-color: #e0ece4;
+  /* text-align: center; */
+  padding: 50px;
+}
+
+.footer a {
+  font-size: 10px;
+  text-decoration: none;
+  color: #818181;
+}
+
+.footer span {
+  font-size: 10px;
+  color: #818181;
+}
+
+.footer p {
+  display: inline;
+  float: right;
+  font-size: 10px;
+  color: #818181;
+}
